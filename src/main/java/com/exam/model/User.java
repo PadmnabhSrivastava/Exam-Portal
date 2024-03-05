@@ -33,8 +33,6 @@ public class User {
 
         
     }
-    //bbbgrsg
-    
         
 
     public User(Long id, String username, String password, String firstName, String lastName, String email,
