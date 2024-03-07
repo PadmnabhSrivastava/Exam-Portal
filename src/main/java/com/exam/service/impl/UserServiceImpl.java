@@ -45,5 +45,21 @@ public class UserServiceImpl implements UserService{
 
        return null;
     }
+
+    //getting user by username
+    @Override
+    public User getUser(String username) {
+      // TODO Auto-generated method stub
+      //throw new UnsupportedOperationException("Unimplemented method 'getUser'");
+      return this.userRepository.findByUsername(username);
+    }
+
+    @SuppressWarnings("null")
+    @Override
+    public void deleteUser(Long userId) {
+      // TODO Auto-generated method stub
+      
+     this.userRepository.deleteById(userId);
+    }
     
 }
