@@ -63,7 +63,7 @@ public class MySecurityConfig  {
             .csrf(csrf -> csrf.disable())
             .cors(cors -> cors.disable())
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/generate-token", "/user/","/current-user").permitAll() // Allow access without authentication (or with json web token )
+                .requestMatchers("/generate-token", "/user/","/current-user","/category/","/quiz/").permitAll() // Allow access without authentication (or with json web token )
                // .requestMatchers((HttpMethod.OPTIONS).permitAll()
                 .anyRequest().authenticated() // Require authentication for all other requests
             )
